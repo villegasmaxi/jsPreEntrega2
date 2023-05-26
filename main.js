@@ -1,6 +1,6 @@
 
 
-//clase constructora que me arma objetos con parametros que pido por prompt en datosUsuarios dentro de un array que declaro vacío (usuarios)
+//clase constructora que me arma objetos con parametros que pido por prompt en datosUsuarios, dentro de un array que declaro vacío (usuarios)
 class Usuario {
   constructor(nombre, edad) {
     this.nombre = nombre;
@@ -81,6 +81,13 @@ function corre() {
             (resultadoMayores.length - i) +
             " Cuanto podes poner vos?"
         );
+        if ( isNaN(comenzal) || comenzal === "") {
+                
+          alert(" no es  un número.");
+          i--
+          continue;
+        }
+        //aca agrego la participacion de dinero de cada comenzal al array resultadoMayores  que contiene los mayores de edad con nombre y edad con datos nombre y edad 
         let aporteComenzal = parseInt(comenzal);
         resultadoMayores[i].comenzal= aporteComenzal;
         montoRonda = montoRonda + parseInt(comenzal);
