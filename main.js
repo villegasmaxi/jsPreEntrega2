@@ -146,7 +146,7 @@ else {
 function pedirPostre(){ 
   let costoPostre = prompt("Cuanto costo el postre?");
  costoPostre= (costoPostre / resultadoMayores.length);
- alert("hay que poner "  + costoPostre + "cada uno");
+ alert("hay que poner "  + costoPostre + " cada uno");
 }
 postre();
  }
