@@ -92,7 +92,7 @@ function corre() {
         resultadoMayores[i].comenzal= aporteComenzal;
         montoRonda = montoRonda + parseInt(comenzal);
         console.log(" montoRecaudado: ", montoRonda);
-        //console.log( " cada uno puso", resultadoMayores.comenzal);
+        
       }
           // Si no alcanza alert "No llegamos a cubrir el costo: Vamos de nuevo." Y vuelvo a preguntar a todos cuanto quieren poner.
       if (montoRonda < costoCena) {
