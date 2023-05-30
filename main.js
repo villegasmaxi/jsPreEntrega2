@@ -7,10 +7,11 @@ class Usuario {
     this.edad = edad;
   }
 }
+
+let usuarios = [];
 //esta funcion pide datos de usuario nombre y edad  y los valida al final llamo a clase constructora para que arme objetos y los pushee al array usuarios 
 function datosUsuarios() {
-  let usuarios = [];
-
+  
   do {
     let nombre = prompt(
       "Ingrese el nombre del usuario (o escriba 'salir' para terminar):"
@@ -48,7 +49,7 @@ function datosUsuarios() {
 
 
 function corre() {
-  let usuarios = datosUsuarios();
+  datosUsuarios();
 //esta funcion de orden superior(filter) mayorDeEdad deja afuera a los menores de 13 años de la romana
   function mayorDeEdad(usuario){
     return usuario.edad>= 13;
@@ -57,7 +58,7 @@ function corre() {
   let resultadoMayores = usuarios.filter(mayorDeEdad);
   console.log(resultadoMayores);
   
-//esta funcion es para mostrar el nombre de quienes pusieron dinero al final de la romana
+//este for es para mostrar el nombre de quienes pusieron dinero al final de la romana
   let usuariosInfo = "";
   for (let i = 0; i < resultadoMayores.length; i++) {
     usuariosInfo += "\n" + resultadoMayores[i].nombre + "\n";
@@ -91,6 +92,7 @@ function corre() {
         let aporteComenzal = parseInt(comenzal);
         resultadoMayores[i].comenzal= aporteComenzal;
         montoRonda = montoRonda + parseInt(comenzal);
+
         console.log(" montoRecaudado: ", montoRonda);
         
       }
